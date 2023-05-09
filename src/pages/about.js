@@ -1,4 +1,5 @@
 import "./about.css"
+import { SKILLS } from "./skills.js"
 
 function About() {
     return (
@@ -13,6 +14,16 @@ function About() {
                 <div className="text-center flex flex-col justify-center mt-10">
                     <h2 className="text-5xl font-thin tracking-widest"> WHO AM I?</h2>
                      <p className="mx-auto md:w-96 mt-5 leading-loose tracking-wide">I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills.</p>
+                </div>
+                <div className="text-center flex flex-col justify-center items-center mt-10">
+                    <h2 className="text-5xl font-thin tracking-widest">SKILLS</h2>
+                    <div className="w-96 md:w-1/2 mt-5">
+            {SKILLS.map((skill, index) => (
+              <span key={index} className="inline-block px-3 py-1 text-sm font-light text-gray-800 mr-2 mb-2 tracking-widest">
+                {skill.name}
+              </span>
+            ))}
+          </div>
                 </div>
             </div>
         </div>

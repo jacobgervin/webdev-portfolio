@@ -1,0 +1,27 @@
+.workpagebg {
+background-color: #F8F8F8;
+}
+
+.projectlink {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .projectlink::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 2px;
+    background-color: #262626;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .projectlink:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }

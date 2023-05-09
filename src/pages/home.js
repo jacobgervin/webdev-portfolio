@@ -1,7 +1,11 @@
 import "./home.css"
+import Work from "./work";
+import About from "./about";
+import Contact from "./contact";
 
 function Home() {
   return (
+    <>
 <div className="hero h-screen w-screen flex flex-col justify-center">
     <div className="container mx-auto my-auto flex flex-col items-center relative">
         <div className="z-20 flex flex-col">
@@ -13,6 +17,10 @@ function Home() {
 
     </div>
 </div>
+<Work />
+<About />
+<Contact />
+</>
   );
 }
 
