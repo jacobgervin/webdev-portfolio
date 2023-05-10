@@ -1,5 +1,7 @@
 
 import cocktailshopImg from "../images/cocktailshop-mockup.png"
+import jocImg from "../images/joc.png"
+import carshopImg from "../images/carshop.png"
 export const PROJECTS = [
     {
         "id": "1",
@@ -8,18 +10,24 @@ export const PROJECTS = [
         "image": cocktailshopImg,
         techstack: ["REACT", "CSS", "HTML", "JAVASCRIPT", "BOOTSTRAP"],
         "github": "https://github.com/jacobgervin/cocktailshop",
+        "live": "https://cocktailshop.vercel.app/",
       },
       {
         "id": "2",
-        "name": "COCKTAILSHOP",
-        "about": "This is a project I made in my react class. The assignment required us to make a webshop, where we fetched the product data from an already existent API."
-
+        "name": "JEWELRYWEBSHOP",
+        "about": "This is a group project. The assignment required us to make a webshop in react, where we set up our own database and api to fetch products from. We used Wordpress as an headless CMS",
+        "image": jocImg,
+        techstack: ["REACT", "CSS", "HTML", "JAVASCRIPT", "TAILWIND", "WORDPRESS"],
+        "github": "https://github.com/TheSpahThatSpies/smykkewebshop",
+        "live": "https://smykkewebshop.vercel.app/",
       },
       {
         "id": "3",
-        "name": "COCKTAILSHOP",
-        "about": "This is a project I made in my react class. The assignment required us to make a webshop, where we fetched the product data from an already existent API."
-
+        "name": "CARSHOP",
+        "about": "This is a project I made in my PHP class, the assignment required us to make a webshop using PHP, we were also required to implement CRUD functions",
+        "image": carshopImg,
+        techstack: ["PHP", "CSS", "HTML", "BOOTSTRAP", "MYSQL"],
+        "github": "https://github.com/jacobgervin/php-project",
       }
 
 
