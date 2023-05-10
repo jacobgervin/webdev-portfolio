@@ -28,6 +28,7 @@ export const PROJECTS = [
         "image": carshopImg,
         techstack: ["PHP", "CSS", "HTML", "BOOTSTRAP", "MYSQL"],
         "github": "https://github.com/jacobgervin/php-project",
+        "live": "http://carshop.jacobgervin.dk/"
       }
 
 
