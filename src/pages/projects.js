@@ -2,6 +2,7 @@
 import cocktailshopImg from "../images/cocktailshop-mockup.png"
 import jocImg from "../images/joc.png"
 import carshopImg from "../images/carshop.png"
+import weatherappImg from "../images/weatherapp.png"
 export const PROJECTS = [
     {
         "id": "1",
@@ -29,6 +30,15 @@ export const PROJECTS = [
         techstack: ["PHP", "CSS", "HTML", "BOOTSTRAP", "MYSQL"],
         "github": "https://github.com/jacobgervin/php-project",
         "live": "http://carshop.jacobgervin.dk/"
+      },
+      {
+        "id": "4",
+        "name": "WEATHERAPP",
+        "about": "This is a personal project I made in my free time, for this project i used an API containing data about the weather around the world.",
+        "image": weatherappImg,
+        techstack: ["REACT", "CSS", "HTML", "TAILWIND", "JAVASCRIPT"],
+        "github": "https://github.com/jacobgervin/weatherapp",
+        "live": "https://weatherapp-umber-omega.vercel.app/"
       }
 
 
