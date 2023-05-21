@@ -3,6 +3,8 @@ import cocktailshopImg from "../images/cocktailshop-mockup.png"
 import jocImg from "../images/joc.png"
 import carshopImg from "../images/carshop.png"
 import weatherappImg from "../images/weatherapp.png"
+import ncPortfolio from "../images/nc-portfolio.png"
+import myPortfolio from "../images/myportfolio.png"
 export const PROJECTS = [
     {
         "id": "1",
@@ -23,13 +25,13 @@ export const PROJECTS = [
         "live": "https://smykkewebshop.vercel.app/",
       },
       {
-        "id": "3",
-        "name": "CARSHOP",
-        "about": "This is a project I made in my PHP class, the assignment required us to make a webshop using PHP, we were also required to implement CRUD functions",
-        "image": carshopImg,
-        techstack: ["PHP", "CSS", "HTML", "BOOTSTRAP", "MYSQL"],
-        "github": "https://github.com/jacobgervin/php-project",
-        "live": "http://carshop.jacobgervin.dk/"
+        "id": "6",
+        "name": "MY PORTFOLIO WEBSITE",
+        "about": "This is my portfolio that I made in my free time for myself. This project was made using React.",
+        "image": myPortfolio,
+        techstack: ["REACT", "CSS", "HTML", "TAILWIND", "JAVASCRIPT"],
+        "github": "https://github.com/jacobgervin/webdev-portfolio",
+        "live": "#"
       },
       {
         "id": "4",
@@ -39,7 +41,25 @@ export const PROJECTS = [
         techstack: ["REACT", "CSS", "HTML", "TAILWIND", "JAVASCRIPT"],
         "github": "https://github.com/jacobgervin/weatherapp",
         "live": "https://weatherapp-umber-omega.vercel.app/"
-      }
+      },
+      {
+        "id": "5",
+        "name": "PORTFOLIO WEBSITE",
+        "about": "This is a portfolio I made in my free time for a graphic designer. This project was made using React.",
+        "image": ncPortfolio,
+        techstack: ["REACT", "CSS", "HTML", "TAILWIND", "JAVASCRIPT"],
+        "github": "https://github.com/jacobgervin/natasjaclemmensen",
+        "live": "https://nc-portfolio.vercel.app/"
+      },
+      {
+        "id": "3",
+        "name": "CARSHOP",
+        "about": "This is a project I made in my PHP class, the assignment required us to make a webshop using PHP, we were also required to implement CRUD functions",
+        "image": carshopImg,
+        techstack: ["PHP", "CSS", "HTML", "BOOTSTRAP", "MYSQL"],
+        "github": "https://github.com/jacobgervin/php-project",
+        "live": "http://carshop.jacobgervin.dk/"
+      },
 
 
 ]

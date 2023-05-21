@@ -11,7 +11,7 @@ function Work() {
     const projects = PROJECTS;
 
     return (
-<div id="work" className="md:h-screen h-fit w-screen workbackground">
+<div id="work" className="h-fit w-screen workbackground">
   <div className="max-w-screen-xl p-3 md:p-8 mx-auto flex flex-col">
     <div className="relative">
     <motion.div
@@ -26,16 +26,16 @@ function Work() {
 
     </div>
     <div
-    className="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 mt-10 ">
+    className="mx-auto columns-1 md:columns-2 lg:columns-3 gap-8 mt-10 ">
 {projects.map((project, index) => (
-        <motion.div
+        <motion.div 
                  initial={{x: '-100px', opacity: 0}}
                  whileInView={{x: 0, opacity: 100}}
                  viewport={{ once: true }}
                  transition={{ duration: 1 }}
-        className="h-96 w-90 md:w-96 bg-neutral-700 relative overflow-hidden cursor-pointer">
+        className="bg-neutral-700 relative overflow-hidden cursor-pointer mb-8">
         <Link to={`/workpage/${project.id}`}>
-            <img src={project.image} className="object-cover hover:scale-110 transition duration-300 w-full h-full"/>
+            <img src={project.image} className="object-cover hover:scale-110 transition duration-300 w-full aspect-square"/>
             <h3 className="absolute font-thin left-4 bottom-4">{project.name}</h3>
         </Link>
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="absolute right-4 bottom-4 flex flex-row items-center cursor-pointer">
