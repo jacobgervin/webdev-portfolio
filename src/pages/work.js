@@ -36,6 +36,11 @@ function Work() {
         className="bg-neutral-700 relative overflow-hidden cursor-pointer mb-8">
         <Link to={`/workpage/${project.id}`}>
             <img src={project.image} className="object-cover hover:scale-110 transition duration-300 w-full aspect-square"/>
+            <div className="absolute w-full top-4 flex flex-row justify-evenly">
+            {project.techstack.map((tech) => (
+                    <span key={tech} className="inline-block px-1 py-1 text-[10px] font-light text-gray-800 mr-1 ml-1 mb-2 bg-purple ">{tech}</span>
+                  ))}
+            </div>
             <h3 className="absolute font-thin left-4 bottom-4">{project.name}</h3>
         </Link>
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="absolute right-4 bottom-4 flex flex-row items-center cursor-pointer">

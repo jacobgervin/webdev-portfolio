@@ -54,7 +54,7 @@ export const PROJECTS = [
       {
         "id": "3",
         "name": "CARSHOP",
-        "about": "This is a project I made in my PHP class, the assignment required us to make a webshop using PHP, we were also required to implement CRUD functions",
+        "about": "This is a project I made in my PHP class, the assignment required us to make a webshop using PHP, we were also required to implement CRUD functions. To access the dashboard use the following credentials: jacobgervin@gmail.com - Password",
         "image": carshopImg,
         techstack: ["PHP", "CSS", "HTML", "BOOTSTRAP", "MYSQL"],
         "github": "https://github.com/jacobgervin/php-project",
