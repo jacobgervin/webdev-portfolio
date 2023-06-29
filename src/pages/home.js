@@ -3,7 +3,7 @@ import Work from "./work";
 import About from "./about";
 import Contact from "./contact";
 import { Link, animateScroll } from 'react-scroll';
-import { motion } from "framer-motion";
+import { filterProps, motion } from "framer-motion";
 
 function Home() {
   return (
@@ -17,7 +17,12 @@ function Home() {
                          viewport={{ once: true }}
                          transition={{ duration: 1 }}
         className="font-semibold text-lg tracking-widest jg">JACOB GERVIN</motion.h1>
-        <h2 className="font-extrabold text-3xl md:text-8xl webdev tracking-widest ">WEBDEVELOPER</h2>
+        <motion.h2
+                         initial={{ opacity: 100, filter: "blur(20rem)" }}
+                         whileInView={{ opacity: 100, filter: "none" }}
+                         viewport={{ once: true }}
+                         transition={{ duration: 2 }}
+         className="font-extrabold text-3xl md:text-8xl webdev tracking-widest ">WEBDEVELOPER</motion.h2>
         <motion.Link
           initial={{y: '50px', opacity: 0}}
           whileInView={{y: 0, opacity: 100}}
@@ -36,13 +41,6 @@ function Home() {
             }}
         className="font-light text-md md:text-sm mt-1 tracking-widest flex flex-row items-center navlink cta">LOOKING FOR AN INTERN?<svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></motion.Link>
         </div>
-        <motion.div 
-                                 initial={{width: '300px'}}
-                                 whileInView={{width: '350px'}}
-                                 viewport={{ once: true }}
-                                 transition={{ duration: 1 }}
-        className="colorbox absolute z-10"></motion.div>
-
     </div>
 </div>
 <Work />

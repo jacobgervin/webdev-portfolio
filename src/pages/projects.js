@@ -11,7 +11,7 @@ export const PROJECTS = [
         "name": "COCKTAILSHOP",
         "about": "This is a project I made in my react class. The assignment required us to make a webshop, where we fetched the product data from an already existent API.",
         "image": cocktailshopImg,
-        techstack: ["REACT", "CSS", "HTML", "JAVASCRIPT", "BOOTSTRAP"],
+        techstack: ["REACT", "CSS", "HTML", "JAVASCRIPT", "TAILWIND"],
         "github": "https://github.com/jacobgervin/cocktailshop",
         "live": "https://cocktailshop.vercel.app/",
       },
