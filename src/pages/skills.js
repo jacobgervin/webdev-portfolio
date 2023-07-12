@@ -28,6 +28,10 @@ export const SKILLS = [
 
       },
       {
+        "name": "VUE",
+
+      },
+      {
         "name": "TAILWIND",
 
       },
@@ -40,7 +44,7 @@ export const SKILLS = [
 
       },
       {
-        "name": "MYSQL",
+        "name": "SQL",
 
       },
       {

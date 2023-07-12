@@ -14,14 +14,8 @@ function Work() {
 <div id="work" className="h-fit w-screen workbackground">
   <div className="max-w-screen-xl p-3 md:p-8 mx-auto flex flex-col">
     <div className="relative">
-    <motion.div
-                     initial={{width: '125px'}}
-                     whileInView={{width: '50px'}}
-                     viewport={{ once: true }}
-                     transition={{ duration: 1 }}
-    className="absolute workbox z-10"></motion.div>
         <div className="z-20 relative">
-            <h1 className=" font-extrabold tracking-widest text-3xl mt-20 ml-2 worktitle">WORK</h1>
+            <h1 className=" font-light tracking-widest text-2xl md:mt-20 worktitle">WORK</h1>
         </div>
 
     </div>
@@ -29,8 +23,8 @@ function Work() {
     className="mx-auto columns-1 md:columns-2 lg:columns-3 gap-8 mt-10 ">
 {projects.map((project, index) => (
         <motion.div 
-                 initial={{x: '-100px', opacity: 0}}
-                 whileInView={{x: 0, opacity: 100}}
+                 initial={{ opacity: 0}}
+                 whileInView={{ opacity: 100}}
                  viewport={{ once: true }}
                  transition={{ duration: 1 }}
         className="bg-neutral-700 relative overflow-hidden cursor-pointer mb-8">

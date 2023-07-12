@@ -1,35 +1,59 @@
 import "./about.css"
 import { SKILLS } from "./skills.js";
 import { motion } from 'framer-motion';
+import { useState } from "react";
 
 function About() {
+
+  const [showNumber, setShowNumber] = useState(false)
+  const [showEmail, setShowEmail] = useState(false)
+
+
     return (
-        <div id="about" className="h-screen w-screen aboutbackground">
+        <div id="about" className="h-contain w-screen aboutbackground">
              <div className="max-w-screen-xl p-8 mx-auto flex flex-col align-center justify-center">
-                <div className="relative abouttitlecontainer mt-5">
-                    <motion.div
-                                         initial={{width: '125px'}}
-                                         whileInView={{width: '50px'}}
-                                         viewport={{ once: true }}
-                                         transition={{ duration: 1.5 }}
-                    className="absolute aboutbox z-10"></motion.div>
-                    <div className="text-center relative z-20 ">
-                    <h1 className=" font-extrabold tracking-widest text-3xl mt-20 z-20 abouttitle">ABOUT</h1>
-                    </div>
+                <div className="md:text-center flex flex-col justify-center mt-10">
+                    <motion.h2
+                                     initial={{ opacity: 0}}
+                                     whileInView={{ opacity: 100}}
+                                     viewport={{ once: true }}
+                                     transition={{ duration: 1 }}
+                    className="text-2xl font-light tracking-widest">ABOUT ME</motion.h2>
+                     <motion.p
+                                                          initial={{ opacity: 0}}
+                                                          whileInView={{ opacity: 100}}
+                                                          viewport={{ once: true }}
+                                                          transition={{ duration: 1 }}
+                     className="mx-auto md:w-2/3 mt-5 font-thin leading-loose tracking-wide">I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills.</motion.p>
                 </div>
-                <div className="text-center flex flex-col justify-center mt-10">
-                    <h2 className="text-5xl font-thin tracking-widest"> WHO AM I?</h2>
-                     <p className="mx-auto md:w-96 mt-5 leading-loose tracking-wide">I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills.</p>
-                </div>
-                <div className="text-center flex flex-col justify-center items-center mt-10">
-                    <h2 className="text-5xl font-thin tracking-widest">SKILLS</h2>
-                    <div className="w-96 md:w-1/2 mt-5 p-2">
+                <div className="md:text-center flex flex-col md:justify-center md:items-center mt-10">
+                    <motion.h2
+                               initial={{ opacity: 0}}
+                               whileInView={{ opacity: 100}}
+                               viewport={{ once: true }}
+                               transition={{ duration: 1 }} className="text-2xl font-light tracking-widest">CURRENT STACK</motion.h2>
+                    <div className=" md:w-1/2 mt-5 md:p-2">
             {SKILLS.map((skill, index) => (
-              <span key={index} className="inline-block px-3 py-1 text-sm font-light text-gray-800 mr-2 mb-2 tracking-widest">
+              <motion.span
+              initial={{ opacity: 0}}
+              whileInView={{ opacity: 100}}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              key={index} className="inline-block px-3 py-1 text-sm font-thin bg-gray-100 text-gray-800 mr-2 mb-2 tracking-widest">
                 {skill.name}
-              </span>
+              </motion.span>
             ))}
           </div>
+          <motion.div
+                       initial={{ opacity: 0}}
+                       whileInView={{ opacity: 100}}
+                       viewport={{ once: true }}
+                       transition={{ duration: 1 }}
+           id="contact" className="h-96 flex mt-10 flex-col md:item-center md:justify-center">
+                    <h3 className="tracking-widest font-light text-2xl">CONTACT INFORMATION</h3>
+                    <div className="flex flex-row mt-4"><button className="px-3 py-1 bg-gray-900 hover:bg-gray-700 text-gray-100 tracking-widest" onClick={() => setShowNumber(!showNumber)}>PHONE</button><p  onClick={() => setShowNumber(!showNumber)} className=" px-3 py-1 bg-gray-100 text-gray-800  text-xl font-thin tracking-wide cursor-pointer">{showNumber ? "4014 1319" : "******"}</p></div> 
+                   <div className="flex flex-row  mt-4"><button className="px-3 py-1 bg-gray-900 hover:bg-gray-700 text-gray-100 tracking-widest" onClick={() => setShowEmail(!showEmail)}>EMAIL</button><p onClick={() => setShowEmail(!showEmail)} className="px-3 py-1 bg-gray-100 text-gray-800  text-xl font-thin tracking-wide cursor-pointer">{showEmail ? "jacobgervin@gmail.com" : "*********************"}</p></div> 
+                </motion.div>
                 </div>
             </div>
         </div>
