@@ -3,7 +3,7 @@ import { SKILLS } from "./skills.js";
 import { motion } from 'framer-motion';
 import { useState } from "react";
 
-function About() {
+function About({ isChecked }) {
 
   const [showNumber, setShowNumber] = useState(false)
   const [showEmail, setShowEmail] = useState(false)
@@ -18,20 +18,20 @@ function About() {
                                      whileInView={{ opacity: 100}}
                                      viewport={{ once: true }}
                                      transition={{ duration: 1 }}
-                    className="text-2xl font-light tracking-widest">ABOUT ME</motion.h2>
+                    className="text-2xl font-light tracking-widest">{isChecked ? "OM MIG" : "ABOUT ME"}</motion.h2>
                      <motion.p
                                                           initial={{ opacity: 0}}
                                                           whileInView={{ opacity: 100}}
                                                           viewport={{ once: true }}
                                                           transition={{ duration: 1 }}
-                     className="mx-auto md:w-2/3 mt-5 font-thin leading-loose tracking-wide">I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills.</motion.p>
+                     className="mx-auto md:w-2/3 mt-5 font-thin leading-loose tracking-wide">{isChecked ? "Jeg studerer på nuværende tidspunkt en professionsbachelor i webudvikling på Zealand i Roskilde. Jeg er passioneret omkring interessante og brugervenlige web applikationer, og jeg nyder at udforske nye teknologier og teknikker til at forbedre mine evner" : "I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills."}</motion.p>
                 </div>
                 <div className="md:text-center flex flex-col md:justify-center md:items-center mt-10">
                     <motion.h2
                                initial={{ opacity: 0}}
                                whileInView={{ opacity: 100}}
                                viewport={{ once: true }}
-                               transition={{ duration: 1 }} className="text-2xl font-light tracking-widest">CURRENT STACK</motion.h2>
+                               transition={{ duration: 1 }} className="text-2xl font-light tracking-widest">{isChecked ? "NUVÆRENDE STACK" : "CURRENT STACK"}</motion.h2>
                     <div className=" md:w-1/2 mt-5 md:p-2">
             {SKILLS.map((skill, index) => (
               <motion.span
@@ -50,8 +50,8 @@ function About() {
                        viewport={{ once: true }}
                        transition={{ duration: 1 }}
            id="contact" className="h-96 flex mt-10 flex-col md:item-center md:justify-center">
-                    <h3 className="tracking-widest font-light text-2xl">CONTACT INFORMATION</h3>
-                    <div className="flex flex-row mt-4"><button className="px-3 py-1 bg-gray-900 hover:bg-gray-700 text-gray-100 tracking-widest" onClick={() => setShowNumber(!showNumber)}>PHONE</button><p  onClick={() => setShowNumber(!showNumber)} className=" px-3 py-1 bg-gray-100 text-gray-800  text-xl font-thin tracking-wide cursor-pointer">{showNumber ? "4014 1319" : "******"}</p></div> 
+                    <h3 className="tracking-widest font-light text-2xl">{isChecked ? "KONTAKT INFORMATION" : "CONTACT INFORMATION"}</h3>
+                    <div className="flex flex-row mt-4"><button className="px-3 py-1 bg-gray-900 hover:bg-gray-700 text-gray-100 tracking-widest" onClick={() => setShowNumber(!showNumber)}>{isChecked ? "TELEFON" : "PHONE"}</button><p  onClick={() => setShowNumber(!showNumber)} className=" px-3 py-1 bg-gray-100 text-gray-800  text-xl font-thin tracking-wide cursor-pointer">{showNumber ? "4014 1319" : "******"}</p></div> 
                    <div className="flex flex-row  mt-4"><button className="px-3 py-1 bg-gray-900 hover:bg-gray-700 text-gray-100 tracking-widest" onClick={() => setShowEmail(!showEmail)}>EMAIL</button><p onClick={() => setShowEmail(!showEmail)} className="px-3 py-1 bg-gray-100 text-gray-800  text-xl font-thin tracking-wide cursor-pointer">{showEmail ? "jacobgervin@gmail.com" : "*********************"}</p></div> 
                 </motion.div>
                 </div>

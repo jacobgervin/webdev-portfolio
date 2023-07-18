@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 
-function Work() {
+function Work({ isChecked }) {
 
     const projects = PROJECTS;
 
@@ -15,7 +15,7 @@ function Work() {
   <div className="max-w-screen-xl p-3 md:p-8 mx-auto flex flex-col">
     <div className="relative">
         <div className="z-20 relative">
-            <h1 className=" font-light tracking-widest text-2xl md:mt-20 worktitle">WORK</h1>
+            <h1 className=" font-light tracking-widest text-2xl md:mt-20 worktitle">{isChecked ? "PROJEKTER" : "PROJECTS"}</h1>
         </div>
 
     </div>

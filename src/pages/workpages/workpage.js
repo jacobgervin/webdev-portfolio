@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { PROJECTS } from "../projects";
 import "./workpage.css"
 
-function Workpage() {
+function Workpage({isChecked}) {
 
   const { id } = useParams();
   const project = PROJECTS.find((p) => p.id === id);
@@ -16,7 +16,7 @@ function Workpage() {
   <div className=" w-screen md:w-1/2 h-full flex flex-col items-center justify-center">
     <div className="md:w-2/3 p-8">
         <h2 className="text-4xl font-thin tracking-widest">{project.name}</h2>
-        <p className="mt-4 font-light leading-loose">{project.about}</p>
+        <p className="mt-4 font-light leading-loose">{isChecked ? project.om : project.about}</p>
         <h2 className="text-4xl font-thin tracking-widest mt-6">TECHSTACK</h2>
         <div className="mt-4">
         {project.techstack.map((tech) => (
@@ -24,8 +24,8 @@ function Workpage() {
                   ))}
         </div>
         <div className="flex flex-col mt-10 md:mt-20">
-        <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-fit cursor-pointer font-thin flex flex-row items-center projectlink">VIEW ON GITHUB <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
-        <a href={project.live} target="_blank" rel="noopener noreferrer" className="mt-4 w-fit cursor-pointer font-thin flex flex-row items-center projectlink">VIEW PROJECT LIVE <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+        <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-fit cursor-pointer font-thin flex flex-row items-center projectlink">{isChecked ? "SE PÅ GITHUB" : "VIEW ON GITHUB"} <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+        <a href={project.live} target="_blank" rel="noopener noreferrer" className="mt-4 w-fit cursor-pointer font-thin flex flex-row items-center projectlink">{isChecked ? "SE LIVE" : "VIEW LIVE"}<svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
         </div>
       </div>
   </div>
