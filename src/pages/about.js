@@ -24,7 +24,7 @@ function About({ isChecked }) {
                                                           whileInView={{ opacity: 100}}
                                                           viewport={{ once: true }}
                                                           transition={{ duration: 1 }}
-                     className="mx-auto md:w-2/3 mt-5 font-thin leading-loose tracking-wide">{isChecked ? "Jeg studerer på nuværende tidspunkt en professionsbachelor i webudvikling på Zealand i Roskilde. Jeg er passioneret omkring interessante og brugervenlige web applikationer, og jeg nyder at udforske nye teknologier og teknikker til at forbedre mine evner" : "I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills."}</motion.p>
+                     className="mx-auto md:w-2/3 mt-5 font-thin leading-loose tracking-wide">{isChecked ? "Jeg studerer på nuværende tidspunkt en professionsbachelor i webudvikling på Zealand i Roskilde. Jeg er passioneret omkring interessante og brugervenlige web applikationer, og jeg nyder at udforske nye teknologier og teknikker til at forbedre mine evner." : "I am currently studying for a bachelor’s degree in web development at Zealand in Roskilde. I am passionate about interesting and user-friendly web applications, and I enjoy exploring new technologies and techniques to enhance my skills."}</motion.p>
                 </div>
                 <div className="md:text-center flex flex-col md:justify-center md:items-center mt-10">
                     <motion.h2
