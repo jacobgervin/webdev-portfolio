@@ -1,13 +1,15 @@
 import "./about.css"
 import { SKILLS } from "./skills.js";
-import { motion } from 'framer-motion';
-import { useState } from "react";
+import { motion, useMotionTemplate, useMotionValue  } from 'framer-motion';
+import { useState, MouseEvent } from "react";
+
+
 
 function About({ isChecked }) {
+  
 
   const [showNumber, setShowNumber] = useState(false)
   const [showEmail, setShowEmail] = useState(false)
-
 
     return (
         <div id="about" className="h-contain w-screen aboutbackground">
@@ -31,7 +33,7 @@ function About({ isChecked }) {
                                initial={{ opacity: 0}}
                                whileInView={{ opacity: 100}}
                                viewport={{ once: true }}
-                               transition={{ duration: 1 }} className="text-2xl font-light tracking-widest">{isChecked ? "NUVÆRENDE STACK" : "CURRENT STACK"}</motion.h2>
+                               transition={{ duration: 1 }} className="text-2xl font-light tracking-widest">{isChecked ? "TECH" : "TECH"}</motion.h2>
                     <div className=" md:w-1/2 mt-5 md:p-2">
             {SKILLS.map((skill, index) => (
               <motion.span

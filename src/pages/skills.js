@@ -32,6 +32,10 @@ export const SKILLS = [
 
       },
       {
+        "name": "LARAVEL",
+
+      },
+      {
         "name": "TAILWIND",
 
       },

@@ -9,7 +9,7 @@ function LanguagePicker({ isChecked, setIsChecked }) {
   };
 
   return (
-    <div className="flex flex-row self-center mr-2 align-center justify-center items-center h-fit w-fit">
+    <div className="flex flex-row self-center mr-0.5 align-center justify-center items-center h-fit w-fit">
       <label className="relative inline-flex items-center cursor-pointer">
         <input
           type="checkbox"
@@ -18,14 +18,9 @@ function LanguagePicker({ isChecked, setIsChecked }) {
           onChange={handleCheckboxChange}
         />
         <div
-          className={`w-5 text-center  text-xs bg-center h-5 bg-gray-200 peer-focus:outline-none  peer`}
-          style={{
-            backgroundImage: isChecked
-              ? `url(${checkedSVG})`
-              : `url(${uncheckedSVG})`,
-            backgroundSize: "cover ",
-          }}
-        ></div>
+          className={` text-center font-bold tracking-wide bg-black text-slate-50  text-xs bg-center p-3 rounded-sm hover:drop-shadow-xl w-5 h-5 bg-[#262626] peer-focus:outline-none  peer flex flex-col justify-center items-center `}
+
+        >{isChecked ? "DA" : "EN"}</div>
       </label>
     </div>
   );

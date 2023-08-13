@@ -7,6 +7,9 @@ module.exports = {
   ],
 
   theme: {
+    fontFamily: {
+      sans: ['"Montserrat"', 'sans-serif']
+    },
     extend: {
       content: {
         'dk': 'url("/icons/dk.svg")',
